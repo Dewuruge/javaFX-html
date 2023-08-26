@@ -1,14 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="lk.ijse.dep11.AboutUsSceneController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane fx:id="root" onDragEntered="#rootOnDragEntered" prefHeight="384.0" prefWidth="454.0" style="-fx-border-color: black; -fx-border-radius: 20; -fx-border-width: 10;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep11.AboutUsSceneController">
+   <children>
+      <Label layoutX="51.0" layoutY="337.0" text="Copyright © 2000–2023 JetBrains s.r.o">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <TextFlow layoutX="46.0" layoutY="229.0" prefHeight="74.0" prefWidth="376.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Licensed to dewuruge kalpadeep. Subscription is active until September 8, 2023.Evaluation purpose only." wrappingWidth="334.0830078125">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </TextFlow>
+      <Button fx:id="btnClose" layoutX="368.0" layoutY="337.0" mnemonicParsing="false" onAction="#btnCloseOnAction" style="-fx-background-color: black;" text="Close" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font></Button>
+      <ImageView fitHeight="262.0" fitWidth="454.0" layoutX="16.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assert.img/Untitled-1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="233.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
 </AnchorPane>

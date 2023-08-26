@@ -13,25 +13,25 @@ import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
-public class MainFormController {
+public class MainSceneController {
 
-//    AppInitializer appInitializer = new AppInitializer();
+    //    AppInitializer appInitializer = new AppInitializer();
     public AnchorPane root;
     public Stage stage;
-    public MenuItem btnNew;
-    public MenuItem btnExit;
-    public MenuItem btnUserGuide;
-    public MenuItem btnAboutUs;
-    public MenuItem mnSelect;
+    public MenuItem mnNew;
+    public MenuItem mnExit;
+    public MenuItem mnUserGuide;
+    public MenuItem mnAboutUs;
+  
 
     public void initialize ()throws Exception{
 
-           }
+    }
 
 
-    public void btnNewOnAction(ActionEvent actionEvent) throws IOException{
+    public void mnNewOnAction(ActionEvent actionEvent) throws IOException{
 
-        AnchorPane mainFormRoot = FXMLLoader.load(getClass().getResource("/view/MainForm.fxml"));
+        AnchorPane mainFormRoot = FXMLLoader.load(getClass().getResource("/view/MainScene.fxml"));
         Scene mainForm = new Scene(mainFormRoot);
 
         stage = new Stage();
@@ -42,16 +42,22 @@ public class MainFormController {
         previousNewScene.close();
     }
 
-    public void btnExitOnAction(ActionEvent actionEvent) {
+    public void mnExitOnAction(ActionEvent actionEvent) {
         Stage previousNewScene = (Stage) root.getScene().getWindow();
         previousNewScene.close();
     }
 
-    public void btnUserGuideOnAction(ActionEvent actionEvent) throws  IOException{
+    public void mnUserGuideOnAction(ActionEvent actionEvent) throws  IOException{
+        AnchorPane aboutUsRoot = FXMLLoader.load(getClass().getResource("/view/AboutUsScene.fxml"));
+        Scene aboutUsScene = new Scene(aboutUsRoot);
+
 
     }
 
-    public void btnAboutUsOnAction(ActionEvent actionEvent)throws IOException {
+
+
+
+    public void mnAboutAsOnAction(ActionEvent actionEvent) throws  IOException{
         AnchorPane aboutUsRoot = FXMLLoader.load(getClass().getResource("/view/AboutUsScene.fxml"));
         Scene aboutUsScene = new Scene(aboutUsRoot);
 
@@ -63,10 +69,5 @@ public class MainFormController {
         aboutUsRoot.setBackground(Background.fill(Color.TRANSPARENT));
         aboutUsScene.setFill(Color.TRANSPARENT);
         stage.show();
-
-    }
-
-    public void mnSelectOnAction(ActionEvent actionEvent) {
-
     }
 }

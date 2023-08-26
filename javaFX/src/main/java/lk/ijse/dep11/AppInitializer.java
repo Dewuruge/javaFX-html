@@ -31,6 +31,7 @@ public class AppInitializer extends Application {
         splashScene.setFill(Color.TRANSPARENT);
         primaryStage.show();
 
+
         // Set up a pause transition for splash screen duration
         PauseTransition pause = new PauseTransition(Duration.seconds(2));
         pause.setOnFinished(event -> {
@@ -39,20 +40,19 @@ public class AppInitializer extends Application {
                 primaryStage.close();
 
                 // Load main window
-                AnchorPane mainRoot = FXMLLoader.load(getClass().getResource("/view/MainForm.fxml"));
+                AnchorPane mainRoot = FXMLLoader.load(getClass().getResource("/view/MainScene.fxml"));
                 Scene mainScene = new Scene(mainRoot);
 
                 // Create a decorated stage for the main window
                 Stage mainStage = new Stage();
                 mainStage.setScene(mainScene);
-                mainStage.setTitle("EDITOR");
+                mainStage.setTitle("Test Vista");
                 mainStage.show();
             } catch (Exception e) {
                 e.printStackTrace();
             }
         });
         pause.play();
-
 
 //        Thread.sleep(2500);
 
