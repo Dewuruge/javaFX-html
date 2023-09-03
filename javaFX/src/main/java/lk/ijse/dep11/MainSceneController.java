@@ -26,6 +26,7 @@ public class MainSceneController {
 
     public void initialize ()throws Exception{
 
+
     }
 
 
@@ -48,8 +49,13 @@ public class MainSceneController {
     }
 
     public void mnUserGuideOnAction(ActionEvent actionEvent) throws  IOException{
-        AnchorPane aboutUsRoot = FXMLLoader.load(getClass().getResource("/view/AboutUsScene.fxml"));
+        AnchorPane aboutUsRoot = FXMLLoader.load(getClass().getResource("/view/UserGuideScene.fxml"));
         Scene aboutUsScene = new Scene(aboutUsRoot);
+        stage = new Stage();
+        stage.setScene(aboutUsScene);
+        stage.setTitle("EDITOR");
+        stage.show();
+        Stage previousNewScene = (Stage) root.getScene().getWindow();
 
 
     }
@@ -57,13 +63,13 @@ public class MainSceneController {
 
 
 
-    public void mnAboutAsOnAction(ActionEvent actionEvent) throws  IOException{
+    public void mnAboutUsOnAction(ActionEvent actionEvent) throws  IOException{
         AnchorPane aboutUsRoot = FXMLLoader.load(getClass().getResource("/view/AboutUsScene.fxml"));
         Scene aboutUsScene = new Scene(aboutUsRoot);
 
         stage = new Stage();
         stage.setScene(aboutUsScene);
-        stage.setTitle("This is a new stage");
+
 
         stage.initStyle(StageStyle.TRANSPARENT);
         aboutUsRoot.setBackground(Background.fill(Color.TRANSPARENT));

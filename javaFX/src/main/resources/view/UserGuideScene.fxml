@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="lk.ijse.dep11.UserGuideSceneController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane fx:id="root" prefHeight="400.0" prefWidth="494.0" style="-fx-background-radius: 25; -fx-border-color: lightblue; -fx-border-width: 10; -fx-background-color: lightyellow;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep11.UserGuideSceneController">
+   <children>
+      <TextFlow layoutX="112.0" layoutY="117.0" prefHeight="180.0" prefWidth="315.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="lore the full potential of Editor with our comprehensive User Guide. Whether you're delving into document editing or diving into video editing, our guide offers step-by-step instructions and expert tips to help you master all aspects of the app. From getting started to troubleshooting common issues, it's your go-to resource for a seamless editing experience. Access the User Guide instantly by clicking the &quot;User Guide&quot; option in the app's main menu and unleash your creativity today." textAlignment="JUSTIFY" wrappingWidth="328.388671875">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </TextFlow>
+   </children>
 </AnchorPane>

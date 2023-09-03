@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-<AnchorPane fx:id="root" onDragEntered="#rootOnDragEntered" prefHeight="384.0" prefWidth="454.0" style="-fx-border-color: black; -fx-border-radius: 20; -fx-border-width: 10;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep11.AboutUsSceneController">
+<AnchorPane fx:id="root" onMouseDragged="#rootOnMouseDragged" onMousePressed="#rootOnMousePressed" prefHeight="384.0" prefWidth="454.0" style="-fx-border-color: black; -fx-border-radius: 20; -fx-border-width: 10;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep11.AboutUsSceneController">
    <children>
       <Label layoutX="51.0" layoutY="337.0" text="Copyright © 2000–2023 JetBrains s.r.o">
          <font>
